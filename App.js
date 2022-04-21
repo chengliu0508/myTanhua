@@ -1,20 +1,10 @@
-import React from 'react';
-import {ThemeProvider, Button} from 'react-native-elements';
+import React, {useState} from 'react';
 
-const theme = {
-  Button: {
-    raised: true,
-  },
-};
+import Tabbar from './src/tab';
 
 // Your App
 const App = () => {
-  return (
-    <ThemeProvider theme={theme}>
-      <Button title="My Button" />
-      <Button title="My 2nd Button" />
-    </ThemeProvider>
-  );
+  return <Tabbar></Tabbar>;
 };
 
 export default App;
