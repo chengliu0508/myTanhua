@@ -43,7 +43,7 @@ const dataSource = [
 ];
 
 const Tabbar = props => {
-  const [selectedTab, setSelectedTab] = React.useState('');
+  const [selectedTab, setSelectedTab] = React.useState('Friend');
 
   return (
     <View style={{flex: 1, backgroundColor: '#F5FCFF'}}>
@@ -57,12 +57,12 @@ const Tabbar = props => {
               tabStyle={stylesheet.tab}
               titleStyle={{color: '#999999'}}
               selectedTitleStyle={{color: '#c863b5'}}
-              renderIcon={() => (
-                <SvgUri width="23" height="23" svgXmlData={v.icon} />
-              )}
-              renderSelectedIcon={() => (
-                <SvgUri width="23" height="23" svgXmlData={v.selectedIcon} />
-              )}
+              // renderIcon={() => (
+              //   <SvgUri width="23" height="23" svgXmlData={v.icon} />
+              // )}
+              // renderSelectedIcon={() => (
+              //   <SvgUri width="23" height="23" svgXmlData={v.selectedIcon} />
+              // )}
               badgeText={v.badge}
               onPress={() => setSelectedTab(v.tabPage)}>
               <v.component />
