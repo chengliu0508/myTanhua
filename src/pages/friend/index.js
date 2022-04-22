@@ -1,7 +1,7 @@
 import {Button} from 'react-native-elements';
 import React from 'react';
 import {View, Text} from 'react-native';
-import {useNavigationContainerRef} from '@react-navigation/native';
+// import {useNavigationContainerRef} from '@react-navigation/native';
 
 const Friend = props => {
   //const navigationRef = useNavigationContainerRef(); // You can also use a regular ref with `React.useRef()`
