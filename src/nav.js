@@ -32,7 +32,7 @@ function App() {
 
   return (
     <NavigationContainer
-      onStateChange={state => console.log('-----New state is', state)}>
+      onStateChange={state => console.log('-----Navigation change----', state)}>
       <Stack.Navigator>
         <Stack.Screen name="Tabbar" component={Tabbar} />
         <Stack.Screen name="Login" component={Login} />
