@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 
-import Tabbar from './src/tab';
+import Navigator from './src/nav';
 
 // Your App
 const App = () => {
-  return <Tabbar></Tabbar>;
+  return <Navigator></Navigator>;
 };
 
 export default App;
