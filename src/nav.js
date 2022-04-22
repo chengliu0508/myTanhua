@@ -1,22 +1,46 @@
-import React from 'react';
+// In App.js in a new project
+
+import * as React from 'react';
+import {useEffect} from 'react';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+
 import Login from './pages/account/login';
 import Demo from './components/Demo';
 import Userinfo from './pages/account/userinfo';
 import Tabbar from './tab';
 import {inject, observer} from 'mobx-react';
 
-import {createStackNavigator} from '@react-navigation/stack';
+const Stack = createNativeStackNavigator();
 
-const Stack = createStackNavigator();
+function App() {
+  useEffect(() => {
+    getMoviesFromApiAsync();
+    return () => {};
+  }, []);
 
-function Navigator() {
+  function getMoviesFromApiAsync() {
+    return fetch('https://facebook.github.io/react-native/movies.json')
+      .then(response => response.json())
+      .then(responseJson => {
+        console.log('responseJson', responseJson);
+        return responseJson.movies;
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  }
+
   return (
-    <Stack.Navigator initialRouteName="Login">
-      <Stack.Screen name="Login" component={Login} />
-      <Stack.Screen name="Demo" component={Demo} />
-      <Stack.Screen name="Tabbar" component={Tabbar} />
-      <Stack.Screen name="Userinfo" component={Userinfo} />
-    </Stack.Navigator>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="Demo" component={Demo} />
+        <Stack.Screen name="Tabbar" component={Tabbar} />
+        <Stack.Screen name="Userinfo" component={Userinfo} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-export default Navigator;
+
+export default App;
