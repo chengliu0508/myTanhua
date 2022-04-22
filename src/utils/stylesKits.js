@@ -25,4 +25,4 @@ let designWidth = 375;
  * desc: 将px转为dp
  * @params elePx:元素的宽度或者高度 单位px
  **/
-export const pxToDp = (elePx) => screenWidth * elePx / designWidth;
+export const pxToDp = elePx => (screenWidth * elePx) / designWidth;

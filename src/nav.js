@@ -16,7 +16,6 @@ const Stack = createNativeStackNavigator();
 function App() {
   useEffect(() => {
     getMoviesFromApiAsync();
-    return () => {};
   }, []);
 
   function getMoviesFromApiAsync() {
@@ -32,11 +31,13 @@ function App() {
   }
 
   return (
-    <NavigationContainer>
+    <NavigationContainer
+      onStateChange={state => console.log('-----New state is', state)}>
       <Stack.Navigator>
+        <Stack.Screen name="Tabbar" component={Tabbar} />
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Demo" component={Demo} />
-        <Stack.Screen name="Tabbar" component={Tabbar} />
+
         <Stack.Screen name="Userinfo" component={Userinfo} />
       </Stack.Navigator>
     </NavigationContainer>

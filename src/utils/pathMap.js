@@ -1,12 +1,12 @@
 /**
  * 接口基地址
  */
-export const BASE_URI = "http://157.122.54.189:9089";
+export const BASE_URI = 'http://157.122.54.189:9089';
 
 /**
  *  登录 获取验证码
  */
-export const ACCOUNT_LOGIN = '/user/login';// 登录
+export const ACCOUNT_LOGIN = '/user/login'; // 登录
 /**
  *  新用户信息注册
  */
@@ -14,16 +14,15 @@ export const ACCOUNT_REGINFO = '/user/loginReginfo'; // 新用户信息注册
 /**
  *  检查验证码
  */
-export const ACCOUNT_VALIDATEVCODE = '/user/loginVerification';// 检查验证码
+export const ACCOUNT_VALIDATEVCODE = '/user/loginVerification'; // 检查验证码
 /**
  * 审核头像
  */
-export const ACCOUNT_CHECKHEADIMAGE = '/user/loginReginfo/head';  //审核头像
+export const ACCOUNT_CHECKHEADIMAGE = '/user/loginReginfo/head'; //审核头像
 /**
  * 审核头像
  */
-export const USER_INFO = '/my/userinfo';  //审核头像
-
+export const USER_INFO = '/my/userinfo'; //审核头像
 
 /**
  * 最近来访
@@ -56,26 +55,25 @@ export const FRIENDS_QUESTIONS = '/friends/questions'; // 测灵魂-问卷列表
 /**
  * 测灵魂 测试题
  */
-export const FRIENDS_QUESTIONSECTION = '/friends/questionSection/:id'// 测灵魂 测试题
+export const FRIENDS_QUESTIONSECTION = '/friends/questionSection/:id'; // 测灵魂 测试题
 /**
  * 测灵魂-提交问卷获得鉴定单信息
  */
-export const FRIENDS_QUESTIONANS = '/friends/questionsAns/:id';// 测灵魂-提交问卷获得鉴定单信息
+export const FRIENDS_QUESTIONANS = '/friends/questionsAns/:id'; // 测灵魂-提交问卷获得鉴定单信息
 /**
  * 朋友信息（点击朋友进入）;
  */
 export const FRIENDS_PERSONALINFO = '/friends/personalInfo/:id'; // 朋友信息（点击朋友进入）;
 
-
 // 圈子接口(QZ)
 /**
  *  推荐动态
  */
-export const QZ_TJDT = '/qz/recommend';   // 推荐动态
+export const QZ_TJDT = '/qz/recommend'; // 推荐动态
 /**
  *  最新动态
  */
-export const QZ_ZXDT = '/qz/newtrends';   // 最新动态
+export const QZ_ZXDT = '/qz/newtrends'; // 最新动态
 /**
  * 单条动态评论
  */
@@ -103,7 +101,7 @@ export const QZ_DT_PL_TJ = '/qz/comments/submit/:id'; //评论-提交
 /**
  * 动态-图片-上传
  */
-export const QZ_IMG_UPLOAD = '/qz/trends/image/upload';  //动态-图片-上传
+export const QZ_IMG_UPLOAD = '/qz/trends/image/upload'; //动态-图片-上传
 /**
  *   动态发布
  */
